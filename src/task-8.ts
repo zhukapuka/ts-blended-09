@@ -14,20 +14,20 @@
 // Guest має лише право: "read"
 // 3. Типізуйте параметр і тип повернення функції getPermissions.
 // 4. Перевірте, що TypeScript не дозволяє передати в getPermissions значення, якого немає в Role.
-
-enum Role {
-  Admin,
-  User,
-  Guest,
-}
-function getPermissions(role: Role): string[] {
-  if (role === Role.Admin) {
-    return ["create", "read", "update", "delete"];
-  } else if (role === Role.User) {
-    return ["read", "update"];
-  } else if (role === Role.Guest) {
-    return ["read"];
-  } else {
-    return [];
-  }
-}
+// рішення
+// enum Role {
+//   Admin,
+//   User,
+//   Guest,
+// }
+// function getPermissions(role: Role): string[] {
+//   if (role === Role.Admin) {
+//     return ["create", "read", "update", "delete"];
+//   } else if (role === Role.User) {
+//     return ["read", "update"];
+//   } else if (role === Role.Guest) {
+//     return ["read"];
+//   } else {
+//     return [];
+//   }
+// }
