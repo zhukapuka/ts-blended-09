@@ -11,3 +11,18 @@
 // Приклад виклику:
 // toUserObjects(users);
 // Повертає: [{ id: 1, name: "alice" }, { id: 2, name: "bob" }, { id: 3, name: "charlie" }]
+type User = {
+  id: number;
+  name: string;
+};
+function toUserObjects(userNames: string[]): User[] {
+  return userNames.map((name, index) => ({
+    id: index + 1, // порядковий номер, починаючи з 1
+    name,
+  }));
+}
+
+const users = ["alice", "bob", "charlie"];
+const userObjects = toUserObjects(users);
+
+console.log(userObjects);
